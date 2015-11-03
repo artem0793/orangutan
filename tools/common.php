@@ -24,6 +24,7 @@ function bootstrap() {
 }
 
 function install() {
+  // @TODO Replace this table to one function.
   db_query('DROP TABLE IF EXISTS `permissions`');
   db_query('CREATE TABLE `permissions` (`rid` int NOT NULL, `type` varchar(255) CHARACTER SET utf8 NOT NULL) ENGINE=InnoDB DEFAULT CHARSET=utf8');
   db_query('INSERT INTO `permissions` (`rid`, `type`) VALUES (\'1\', \'user anonymous\')');
