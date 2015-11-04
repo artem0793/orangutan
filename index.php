@@ -1,6 +1,6 @@
 <?php
 
-ob_start(PHP_OUTPUT_HANDLER_CLEANABLE);
+ob_start(NULL, 0, PHP_OUTPUT_HANDLER_CLEANABLE);
 
 header('Content-Type: text/plain; charset=utf8');
 
