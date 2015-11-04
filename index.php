@@ -37,13 +37,15 @@ if ($request_path != FALSE) {
     exit;
   }
 
+  menu_execute($item);
+  
+  ob_clean();
+  
   header('Cache-Control: no-store, no-cache, must-revalidate, max-age=0');
   header('Cache-Control: post-check=0, pre-check=0', FALSE);
   header('Pragma: no-cache');
   header('Content-Type: application/javascript; charset=utf8');
-
-  menu_execute($item);
-
+  
   exit(json_encode($data));
 }
 
